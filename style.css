@@ -15,6 +15,7 @@
   --color-yellow: #fff7d1;
   --color-orange: #ff9900;
   --color-black: #000000;
+  --color-dark-green: #1d809f;
 
   /* Font size */
   --font-large: 48px;
@@ -106,8 +107,9 @@ p {
   z-index: 1;
 }
 #navbar.navbar--dark {
-  background-color: var(--color-blue);
-  padding: 8px;
+  background-color: var(--color-dark-grey);
+  padding: 1px;
+  opacity: 0.8;
 }
 
 .navbar__menu {
@@ -126,13 +128,10 @@ p {
   border-radius: var(--size-border-radius);
 }
 
-.navbar__menu__item.active {
-  border: 1px solid var(--color-white);
-}
-
 .navbar__menu__item:hover {
   border: 1px solid var(--color-white);
-  background-color: var(--color-dark-blue);
+  color: var(--color-dark-green);
+  /* background-color: var(--color-dark-blue); */
 }
 
 .navbar__toggle-btn {
@@ -147,7 +146,7 @@ p {
 /* Home */
 
 #home {
-  background: url("imgs/home-background.png") center/cover no-repeat;
+  background: url("imgs/yellowpenbk.jpg") center/cover no-repeat;
   padding: 120px 40px 40px 40px;
   text-align: center;
 }
@@ -171,8 +170,7 @@ p {
   border-radius: var(--size-border-radius);
 }
 .home__contact:hover {
-  color: var(--color-orange);
-  /* background-color: var(--color-orange); */
+  color: var(--color-dark-green);
 }
 
 /* Section Common */
@@ -194,25 +192,26 @@ p {
   margin: 80px 0;
 }
 
+/* Awsomefont도 font이므로 font-size 처리 */
 .major__icon {
   width: 170px;
   height: 170px;
-  /* Awsomefont도 font이므로 font-size 처리 */
-  font-size: 70px;
   line-height: 170px;
+  font-size: 70px;
   margin: auto;
   color: var(--color-blue);
-  border: 1px solid var(--color-blue);
+  border: 3px solid var(--color-blue);
   border-radius: 50%;
   margin-bottom: 16px;
 }
+
 .major__icon i {
   transition: all var(--animation-duration) ease;
 }
 
 .major__icon:hover i {
   color: var(--color-dark-blue);
-  transform: scale(1.1) rotate(-30deg);
+  transform: scale(1.1) rotate(-15deg);
 }
 .major__title,
 .major__description {
@@ -223,6 +222,7 @@ p {
 }
 
 .job {
+  font-size: 3rem;
   display: flex;
   align-items: center;
 }
@@ -236,7 +236,7 @@ p {
 }
 
 .job__name {
-  font-size: var(--font-small);
+  font-size: var(--font-regular);
 }
 .job__period {
   font-size: var(--font-micro);
@@ -250,7 +250,7 @@ p {
 }
 /* Skill */
 #skills {
-  background-color: var(--color-yellow);
+  background-color: var(--color-dark-green);
 }
 
 .skillset {
@@ -296,6 +296,10 @@ p {
 }
 
 /* Work */
+#work {
+  background: url("imgs/yellowsci.jpg") center/cover no-repeat;
+}
+
 .work__categories {
   margin: 40px;
 }
@@ -351,6 +355,7 @@ p {
   height: 250px;
   margin: 2px;
   background-color: var(--color-light-white);
+  cursor: pointer;
 }
 .project.invisible {
   display: none;
@@ -379,7 +384,8 @@ p {
 
 .project:hover .project__description {
   opacity: 0.8;
-  transform: translateY(0px);
+  transform:  translateY(0px);
+  z-index: 1;
 }
 
 .project__description h3 {
@@ -397,46 +403,9 @@ p {
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }
-
-/* Testimonial */
-#testimonials {
-  background-color: var(--color-light-white);
-}
-.testimonials {
-  margin: 40px;
-}
-.testimonial {
-  display: flex;
-  margin: 32px 0;
-}
-.testimonial__avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-}
-.testimonial__avatar:nth-child(odd) {
-  /* 홀수일경우 */
-  margin-right: 40px;
-}
-.testimonial__avatar:nth-child(even) {
-  /* 짝수일경우 */
-  margin-left: 40px;
-}
-.testimonial__speech-bubble {
-  padding: 18px;
-  background-color: var(--color-white);
-  border-radius: var(--size-border-radius);
-}
-.testimonial__speech-bubble p {
-  color: var(--color-light-grey);
-}
-.testimonial__speech-bubble a {
-  color: var(--color-dark-blue);
-}
-
 /* Contact */
 #contact {
-  background-color: var(--color-blue);
+  background-color: var(--color-dark-green);
 }
 .contact__title,
 .contact__email,
@@ -467,18 +436,68 @@ p {
   height: 70px;
   font-size: 50px;
   color: var(--color-white);
-  background-color: var(--color-pink);
-  border-radius: 50%;
+  background-color: var(--color-dark-grey);
+  border-radius: 20%;
   opacity: 0;
-  transition: opacity 300ms ease-in;
+  transition: opacity 150ms ease-in-out;
   /* 클릭 금지 */
   pointer-events: none;
 }
 
 .arrow-up.visible {
-  opacity: 1;
+  opacity: 0.7;
   pointer-events: auto;
 }
+
+  /* Modal Page CSS */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  border-radius: 2%;
+  
+}
+.modal-content h3:after {
+  /* h3 다음에 들어갈 내용*/
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  height: 2px;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  background-color: var(--color-dark-white);
+}
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 /* media query 최소한의 차이점이 뽑아진 아이들만 들어가야한다. */
 @media screen and (max-width: 768px) {
@@ -501,7 +520,8 @@ p {
     flex-direction: column;
     /* 왼쪽정렬 */
     align-items: flex-start;
-    background-color: var(--color-blue);
+    background-color: var(--color-dark-grey);
+    opacity: 0.9;
   }
   #navbar.navbar--dark {
     padding: 16px;
@@ -540,24 +560,7 @@ p {
     /* 화면이 작으면 딱 맞게 커지도록 */
     flex-grow: 1;
   }
-  .testimonial {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .testimonial__avatar {
-    width: 120px;
-    height: 120px;
-  }
-  .testimonial__avatar:nth-child(even),
-  .testimonial__avatar:nth-child(odd) {
-    margin: 0px;
-    margin-bottom: 8px;
-  }
-  /* 기본 order은 0; */
-  .testimonial__speech-bubble {
-    order: 1;
-  }
   .arrow-up {
     width: 50px;
     height: 50px;
