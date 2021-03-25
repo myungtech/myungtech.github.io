@@ -290,6 +290,10 @@ p {
 .tools {
   background-color: var(--color-grey);
 }
+.tools__partition {
+  display: flex;
+  justify-content: center;
+}
 .tools,
 .etc {
   padding: 20px;
@@ -384,7 +388,7 @@ p {
 
 .project:hover .project__description {
   opacity: 0.8;
-  transform:  translateY(0px);
+  transform: translateY(0px);
   z-index: 1;
 }
 
@@ -449,7 +453,7 @@ p {
   pointer-events: auto;
 }
 
-  /* Modal Page CSS */
+/* Modal Page CSS */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -459,22 +463,20 @@ p {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content/Box */
-.modal-content {
+.modal__content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
   width: 50%; /* Could be more or less, depending on screen size */
   border-radius: 2%;
-  
 }
-.modal-content h3:after {
-  /* h3 다음에 들어갈 내용*/
+.modal__content h2:after {
   content: "";
   display: block;
   position: relative;
@@ -497,7 +499,21 @@ p {
   text-decoration: none;
   cursor: pointer;
 }
+.modal__content p {
+  margin: 10px 0;
+}
+.modal__content a i {
+  font-size: var(--font-medium);
+  margin: 10px 10px;
+}
+.modal__content a i {
+  transition: all var(--animation-duration) ease;
+}
 
+.modal__content a i:hover {
+  transform: scale(1.1);
+  color: var(--color-light-grey);
+}
 
 /* media query 최소한의 차이점이 뽑아진 아이들만 들어가야한다. */
 @media screen and (max-width: 768px) {
