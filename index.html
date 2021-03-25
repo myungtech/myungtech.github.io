@@ -354,6 +354,15 @@
               인적사항, 경력사항, 자기소개 등을 기입하면 PDF파일로 변환되어 관리자가 채용여부를 
               결정하는 프로젝트.
           </p>
+          <p>1 관리자 로그인 페이지 구성<br>
+            - 로그인 SHA-256 암호화 처리
+            </p>
+          <p>2 관리자 채용공고 페이지 구성<br>
+            - Ckeditor 사용<br>
+            - 접수 시 변환된 PDF 내부 구성</p>
+          <p>3 사용자 채용지원접수 및 각 해당 채용공고에 따른 접수 페이지 구성<br>
+            - Mysql외부데이터를 가져와 채용 접수 시 Select 상자로 선택 가능하게 구성</p>
+          <p>4 Arcon을 통한 배포</p>
         </div>
       </div>
 
@@ -368,7 +377,21 @@
               상황 전파를 위해 다양한 기상 관측정보와 수방 관련시설을 
               통합한 상황모니터링 및 전파 시스템을 구축한 프로젝트.
          </p>
-         </p>
+         <p>1 KT Cloud 환경설정 <br>
+            - MSSQL 설치와 방화벽 해제 후 데이터 가져옴<br>
+            - Apace Tomcat 설치
+        </p>
+         <p>2 관리자 페이지 구성 <br>
+            - 로그인 SHA-256 암호화 처리</p>
+         <p>3 현재 강우량과 관측 정보가 표출되게 페이지 구성<br>
+            - 기상청 API Crawling 한 데이터가 특정 상황이 되면 SQL Procedure를 거쳐
+             카카오톡, 문자, 팩스로 특정인에게 상황전파<br>
+            - Quartz Scheduler로 기상청 API에 따른 데이터를 화면에 표출<br>
+            - jQuery와 JSON을 사용해 페이지 구성<br>
+            - 관측 정보 Apache Poi를 통한 Excel로 변환할 수 있게 구성</p>
+         <p>4 사용자들에게 상황전파가 되는 솔루션 연결 및 구성 <br>
+            - POPBILL Solution을 통한 카카오톡, 문자, 팩스 사용<br>
+            - Apache Poi를 통한 팩스 전파</p>
         </div>
       </div>
     <div class="modal">
@@ -419,9 +442,9 @@
           <h2 class="modal__title">Business Card</h2>
           <p>- 개발기간 : 2020.11 ~ 2021.03</p>
           <p>- 주요내용 : 로그인을 하면 Firebase에 사용자 정보를 저장하여 자동 로그인도 가능하며
-              Router라이브러리를 사용하여 페이지 이동이됨. 
+              Router라이브러리를 사용하여 로그인시 페이지 이동이됨. 
               내부에서 명함을 작성하고 동적으로 옆의 화면에서 바로 표출되면서 사용자의 정보에 저장이되어
-              로그인시 해당 데이터들이 호출되는 명함을 만들어주는 웹 어플리케이션</p>
+              해당 아이디에서 로그아웃을 하면 재로그인시 해당 데이터들이 호출되는, 명함을 만들어주는 웹 어플리케이션</p> 
           <a href="https://github.com/myungtech/business_card" style="color: black;">
             <i class="fab fa-github">Github</i>
            </a>
@@ -435,7 +458,7 @@
          <span class="close"><i class="fas fa-times"></i></span>
           <h2 class="modal__title">Myung's Portfolio</h2>
           <p>- 개발기간 : 2020.11 ~ 2021.03</p>
-          <p>- 주요내용 : 반응형 웹 디자인</p>
+          <p>- 주요내용 : Media query를 사용한 반응형 웹 디자인</p>
           <a href="https://github.com/myungtech/portfolio" style="color: black;">
           <i class="fab fa-github">Github</i>
         </a>

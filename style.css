@@ -501,6 +501,7 @@ p {
 }
 .modal__content p {
   margin: 10px 0;
+  font-size: var(--font-small);
 }
 .modal__content a i {
   font-size: var(--font-medium);
