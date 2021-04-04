@@ -499,21 +499,28 @@ p {
   text-decoration: none;
   cursor: pointer;
 }
-.modal__content p {
+.modal__content > p {
   margin: 10px 0;
   font-size: var(--font-small);
+  list-style: unset;
 }
-.modal__content a i {
+.modal__content > a > i {
   font-size: var(--font-medium);
   margin: 10px 10px;
 }
-.modal__content a i {
+.modal__content > a > i {
   transition: all var(--animation-duration) ease;
 }
 
-.modal__content a i:hover {
-  transform: scale(1.1);
+.modal__content > a > i:hover {
+  transform: scale(1.2);
   color: var(--color-light-grey);
+}
+.modal__content > ul > li {
+  list-style: unset;
+}
+.modal__content > ul {
+  margin: 0em 1em 1em 1em;
 }
 
 /* media query 최소한의 차이점이 뽑아진 아이들만 들어가야한다. */
