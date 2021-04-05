@@ -155,6 +155,7 @@ p {
   height: 250px;
   border-radius: 50%;
   border: 2px solid var(--color-white);
+  object-fit: cover;
 }
 .home__title,
 .home__description {
