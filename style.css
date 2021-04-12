@@ -187,6 +187,7 @@ p {
 }
 
 /* About */
+
 .about__majors {
   display: flex;
   justify-content: space-between;
@@ -302,7 +303,7 @@ p {
 
 /* Work */
 #work {
-  background: url("imgs/yellowsci.jpg") center/cover no-repeat;
+  /* background: url("imgs/yellowsci.jpg") center/cover no-repeat; */
 }
 
 .work__categories {
