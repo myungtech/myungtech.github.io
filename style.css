@@ -510,13 +510,8 @@ p {
   font-size: var(--font-medium);
   margin: 10px 10px;
 }
-.modal__content > a > i {
-  transition: all var(--animation-duration) ease;
-}
-
-.modal__content > a > i:hover {
-  transform: scale(1.2);
-  color: var(--color-light-grey);
+.modal__content > a :hover {
+  color: red;
 }
 .modal__content > ul > li {
   list-style: unset;
